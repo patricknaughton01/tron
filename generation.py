@@ -53,6 +53,15 @@ class Generation:
             i += 1
         for i in range(self.size - len(self.players)):
             self.players.append(random.choice(self.players).reproduce())
+        with open("best_weights", "w") as outfile:
+            best_player = self.players[0]
+            try:
+                for layer in best_player.layers:
+                    outfile.write(str(layer.weights) + "\n")
+            except Exception as e:
+                print(e)
+                print("write failure")
+            outfile.close()
         if render:
             pygame.display.quit()
             pygame.display.init()

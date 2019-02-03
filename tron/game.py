@@ -110,7 +110,7 @@ class Game:
                 ),
                 CPUPlayer(
                     1,
-                    (255,255,255),
+                    (255,0,255),
                     width - self.offset - self.player_size,
                     height - self.offset - self.player_size,
                     self.player_size,
