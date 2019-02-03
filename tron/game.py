@@ -15,6 +15,7 @@ class GameType(Enum):
     CC = 3
 
 size = (640, 480)
+pygame.display.set_mode(size)
 
 class Game:
     def __init__(
